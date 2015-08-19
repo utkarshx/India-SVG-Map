@@ -56,16 +56,18 @@
 	$(document).ready(function(){
 		$.each(map_config,function(index,value){
 			console.log(index);
-			$('#'+index).tooltip({
-					title: "HEKKO"
-				});
-			$('#'+index).tooltip('show');
-			$('#'+index).mouseover(function(e){
-				$('#'+index).tooltip('show')
-				console.log(value);
-			});
 		});
-	});
+        $('#regions path').mouseenter(function(){
+            $(this).attr({
+                    "fill":"#ffcc5f"
+                });
+	   });
+        $('#regions path').mouseleave(function(){
+            $(this).attr({
+                    "fill":"#EFF9FF"
+                });
+       });
+    });
 	</script>
 </body>
 </html>
